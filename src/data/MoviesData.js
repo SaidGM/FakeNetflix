@@ -1,3 +1,4 @@
+const moviesData = 
 [
     {
      "title": "Shrek",
@@ -108,3 +109,5 @@
      "id": "12"
     }
    ]
+
+   export default moviesData
