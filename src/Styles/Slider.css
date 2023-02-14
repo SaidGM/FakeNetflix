@@ -1,7 +1,7 @@
 .sliderBox{
-    /* border: 1px solid pink; */
     overflow-x: hidden;
     overflow-y: hidden;
+    /* border: 1px solid pink; */
 }
 .slider{
     height: 30vh;
@@ -15,30 +15,42 @@
     font-size: 20px;
     position: absolute;
 }
-
 #heart{
     right: 10px;
     bottom: 15px;
 }
-
 #pencil{
     right: 10px;
     bottom: 45px;
 }
-
 #info{
     left: 10px;
     bottom: 15px;
     font-size: 23px;
     color: white;
 }
-
 .item{
     width: 170px;
-    /* border: 1px solid green; */
     position: relative;
+    /* border: 1px solid green; */
 }
-
+.sliderCategories{
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 10vh;
+    gap: 7px;
+    width: 100%;
+    /* cursor: grab; */
+}
+.itemCategories{
+    width: 170px;
+    position: relative;
+    background-color: rgb(197, 216, 117);
+    padding: 10px 5px;
+    border-radius: 0.5em;
+    text-align: center;
+}
 .item img{
     pointer-events: none;/* para no arrastrar una imagen al seleccionarla  */
     width: 170px;
@@ -47,9 +59,7 @@
     border-radius: 1em;
 }
 
-
-
-
+/* ORDENADOR */
 @media (min-width: 1100px){
     .sliderBox{
         margin: 0 40px;
@@ -58,10 +68,7 @@
         height: 35vh;
         gap: 20px;
     }
-    /* .item{
-        width: 170px;
-    } */
-    .item:hover{
+    .item:hover, .itemCategories:hover{
         -webkit-transform: scale(1.1);
 	    -ms-transform: scale(1.1);
 	    transform: scale(1.1);

@@ -1,18 +1,22 @@
 import React from 'react'
+import { motion } from 'framer-motion';
+import jason from '../data/MoviesData'
+
 
 function Categories() {
   return (
-    <section className='sliderBox'>
+    <motion.div className='sliderBox'>
       <h4 className='h4'>Categories</h4>
-      <div className='slider'>
-        <article className='item'>
-          
-        </article>
-        <article className='item'>
-          
-        </article>
-      </div>
-    </section>
+      <motion.div className='sliderCategories'>
+        {jason.map((item)=>{
+          return (
+            <motion.div className='itemCategories'>
+              <h5>{item.categorie}</h5>
+            </motion.div>
+          )
+        })}
+      </motion.div>
+    </motion.div>
   )
 }
 
