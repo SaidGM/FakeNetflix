@@ -1,4 +1,3 @@
-import { Routes } from "react-router-dom";
 import AllMovies from "./components/AllMovies";
 import Categories from "./components/Categories";
 import NavBar from "./components/NavBar";
