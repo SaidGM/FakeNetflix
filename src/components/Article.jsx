@@ -4,20 +4,18 @@ import { Icon } from '@iconify/react';
 
 
 function Article() {
-    const [color, setColor] = useState(true)
+    // const [color, setColor] = useState(true)
 
 
-    const Onchange = ()=> {
-        setColor(!color)
-    }
+ 
 
-    const map = MoviesData.map((item)=> {
+    const map = MoviesData.map((item)=> {   
         return(
             <>
-                <article className='article'>
+                <article className='article' key={item.id}>
                     <Icon icon="material-symbols:star-rate-rounded" 
-                    className='iconStar' onClick={Onchange} 
-                    color={color ? "white" : "yellow"}/>
+                    id='iconStar' key={item.id}
+                    color={item.isFavorite ? "yellow" :"white" }/>
 
                     <img src={item.img} alt=""  className='poster'/>
                     <Icon icon="mdi:lead-pencil" className='iconPencil'/>
