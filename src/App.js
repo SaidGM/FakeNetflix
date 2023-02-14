@@ -1,17 +1,14 @@
-import AllMovies from "./components/AllMovies";
-import Categories from "./components/Categories";
-import NavBar from "./components/NavBar";
-import Favorites from "./components/Favorites";
+import { Route, Routes } from "react-router-dom";
+import PagePrincipal from "./Pages/PagePrincipal";
 import './Styles/Main.css'
 
 
 function App() {
   return (
-      <>
-      <NavBar/>
-      <AllMovies/>
-      <Categories/>
-      <Favorites/>
+    <>
+      <Routes>
+        <Route path="/" element={<PagePrincipal/>}/>
+      </Routes>
       </>
   );
 }

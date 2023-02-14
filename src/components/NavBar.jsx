@@ -13,7 +13,6 @@ function NavBar() {
             <li id='favorite' className='icons'><FaStar/></li>
             <li className='menuList'>Home</li>
             <li className='menuList'>Favorites</li>
-            
         </ul>
     </nav>
     </>
