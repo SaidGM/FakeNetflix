@@ -6,7 +6,7 @@ import Logo from '../img/logo.png'
 function NavBar() {
   return (
     <>
-    <img id='logo' src={Logo}/>
+    <img id='logo' src={Logo} alt=''/>
     <nav>
         <ul id='menu'>
             <li id='home' className='icons'><FaHome/></li>
