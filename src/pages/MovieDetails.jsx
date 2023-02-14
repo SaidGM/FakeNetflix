@@ -1,18 +1,22 @@
 import React from 'react'
 import jason from '../data/MoviesData'
+import '../Styles/MovieDetails.css'
+
 
 function MovieDetails() {
   return (
-    <>
-        <img id='moviePoster' src={jason[0].img}/>
-        <h1>{jason[0].title}</h1>
-        <button>Edit</button>
-        <p>{jason[0].categorie}</p>
-        <h3>{jason[0].year}</h3>
-        <p>{jason[0].info}</p>
-        <button>View</button>
-        <button>Dowload</button>
-    </>
+    <div className='bigPapa'>
+        <img id='imgMovie' src={jason[0].img}/>
+        <h1 id='titleMovie'>{jason[0].title}</h1>
+        <h3 id='yearMovie'>{jason[0].year}</h3>
+        <p id='infoMovie'>{jason[0].info}</p>
+        <p id='categorieMovie'>{jason[0].categorie}</p>
+        <div id='btnDiv'>
+          <button id='editBtn' className='btn'>Edit</button>
+        </div>
+        {/* <button id='viewBtn' className='btn'>View</button> */}
+        {/* <button id='dowloadBtn' className='btn'>Dowload</button> */}
+    </div>
   )
 }
 
