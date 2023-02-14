@@ -2,13 +2,13 @@ import React from 'react'
 
 function Categories() {
   return (
-    <section className='section'>
+    <section className='sliderBox'>
       <h4 className='h4'>Categories</h4>
-      <div className='carrousel'>
-        <article className='article'>
+      <div className='slider'>
+        <article className='item'>
           
         </article>
-        <article className='article'>
+        <article className='item'>
           
         </article>
       </div>

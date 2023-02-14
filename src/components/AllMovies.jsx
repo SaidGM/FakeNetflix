@@ -1,7 +1,9 @@
 import React from 'react'
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import '../Styles/Slider.css'
+import { motion } from 'framer-motion';
 
 
 const url = "https://63ea1eb13363c87003620d7f.mockapi.io/movies"
@@ -16,21 +18,21 @@ function AllMovies() {
   console.log(post);
 
   return (
-    <section className='section'>
+    <motion.div className='sliderBox'>
       <h4 className='h4'>All movies</h4>
-      <div className='carrousel'>
+      <motion.div className='slider' drag='x' dragConstraints={{right: 0, left: -1063}}>
         {
           post.map((item) => {
             return (
-              <article key={item.id} className='article' >
+              <motion.div key={item.id} className='item' >
                 <AiOutlineHeart className="heart" />
                 <img src={item.img} alt="" className='moviePoster' />
-              </article>
+              </motion.div>
             )
           })
         }
-      </div>
-    </section>
+      </motion.div>
+    </motion.div>
   )
 }
 
