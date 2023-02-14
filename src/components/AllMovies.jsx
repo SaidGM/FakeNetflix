@@ -6,16 +6,17 @@ import '../Styles/Slider.css'
 import { motion } from 'framer-motion';
 
 
+
 const url = "https://63ea1eb13363c87003620d7f.mockapi.io/movies"
 
 function AllMovies() {
 
   const [post, setPost]= useState([])
 
-  useEffect(()=>{
-    axios.get(url).then((res)=>setPost(res.data))
-  },[])
-  console.log(post);
+  // useEffect(()=>{
+  //   axios.get(url).then((res)=>setPost(res.data))
+  // },[])
+  // console.log(post);
 
   return (
     <motion.div className='sliderBox'>
