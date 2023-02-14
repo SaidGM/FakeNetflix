@@ -1,7 +1,7 @@
 .sliderBox{
     /* border: 1px solid pink; */
     overflow-x: hidden;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
 }
 .slider{
     height: 30vh;
@@ -11,17 +11,27 @@
     cursor: grab;
     width: 100%;
 }
-.heart{
+.iconMovies{
     font-size: 20px;
-    position:absolute;
-    right: 10px;
-    bottom: 10px;
+    position: absolute;
 }
+
+#heart{
+    right: 10px;
+    bottom: 15px;
+}
+
+#pencil{
+    right: 10px;
+    bottom: 45px;
+}
+
 .item{
     width: 170px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     position: relative;
 }
+
 .item img{
     pointer-events: none;/* para no arrastrar una imagen al seleccionarla  */
     width: 170px;

@@ -1,10 +1,10 @@
 import React from 'react'
-import { AiOutlineHeart, AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
-import axios from "axios";
-import { useEffect, useState } from "react";
+// import axios from "axios";
+// import { useEffect, useState } from "react";
 import '../Styles/Slider.css'
 import { motion } from 'framer-motion';
 import jason from '../data/MoviesData'
+import {FaPencilAlt,FaHeart} from 'react-icons/fa'
 
 
 // const url = "https://63ea1eb13363c87003620d7f.mockapi.io/movies"
@@ -26,7 +26,8 @@ function AllMovies() {
           jason.map((item) => {
             return (
               <motion.div key={item.id} className='item' >
-                <AiOutlineHeart className="heart" />
+                <FaHeart id="heart"  className='iconMovies' color={item.isFavorite ? 'red' : 'white'}/>
+                <FaPencilAlt id='pencil' className='iconMovies'/>
                 <img src={item.img} alt="" className='moviePoster' />
               </motion.div>
             )
