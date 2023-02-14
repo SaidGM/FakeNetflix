@@ -26,6 +26,13 @@
     bottom: 45px;
 }
 
+#info{
+    left: 10px;
+    bottom: 15px;
+    font-size: 23px;
+    color: white;
+}
+
 .item{
     width: 170px;
     /* border: 1px solid green; */
