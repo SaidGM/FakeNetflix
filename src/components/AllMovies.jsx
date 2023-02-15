@@ -27,7 +27,7 @@ function AllMovies() {
             getAllMovies.map((item, key) => {
               return (
                 <motion.div key={key.id} className='item' >
-                  <FaHeart id="heart"  className='iconMovies' color={item.isFavorite ? 'red' : 'white'}/>
+                  <FaHeart id="heart"  className='iconMovies' color={item.isFavorite ? 'red' : 'white'} />
                   <FaPencilAlt id='pencil' className='iconMovies'/>
                   <Link to={'/details'}>
                     <FaInfoCircle id='info' className='iconMovies'/>

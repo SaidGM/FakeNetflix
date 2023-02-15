@@ -18,6 +18,7 @@
 #heart{
     right: 10px;
     bottom: 15px;
+    cursor: pointer;
 }
 #pencil{
     right: 10px;
