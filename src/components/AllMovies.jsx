@@ -4,26 +4,25 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import {FaPencilAlt,FaHeart, FaInfoCircle} from 'react-icons/fa'
 import '../Styles/Slider.css'
-import allMoviesService from '../apiServices/allMoviesService';
+import allMoviesService from '../apiServices/allMoviesServices';
 
 
 function AllMovies() {
 
   const [getAllMovies, setGetAllMovies] = useState([])
+
   useEffect(()=>{
     allMoviesService.getAllMovies().then((data)=>{
-      setGetAllMovies(data[4].movies)
-    })
-  },[])
+      setGetAllMovies(data)
+    })},[]);
 
 
   return (
     <>
-      {console.log(getAllMovies)}
 
       <motion.div className='sliderBox'>
         <h4 className='h4'>All movies</h4>
-        <motion.div className='slider' drag='x' dragConstraints={{right: 0, left: -1063}}>
+        <motion.div className='slider' drag='x' dragConstraints={{right: 0, left: -883}}>
           {
             getAllMovies.map((item, key) => {
               return (
