@@ -1,17 +1,28 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import jason from '../data/MoviesData'
+import allMoviesService from '../apiServices/allMoviesService';
+import { useEffect, useState } from "react";
+
+// import jason from '../data/MoviesData'
 
 
 function Categories() {
+
+  const [getAllMovies, setGetAllMovies] = useState([])
+  useEffect(()=>{
+    allMoviesService.getAllMovies().then((data)=>{
+      setGetAllMovies(data)
+    })
+  },[])
+
   return (
     <motion.div className='sliderBox'>
       <h4 className='h4'>Categories</h4>
       <motion.div className='sliderCategories'>
-        {jason.map((item)=>{
+        {getAllMovies.map((item)=>{
           return (
             <motion.div className='itemCategories'>
-              <h5>{item.categorie}</h5>
+              <h5>{item.category}</h5>
             </motion.div>
           )
         })}
