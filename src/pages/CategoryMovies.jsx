@@ -19,9 +19,9 @@ function CategoryMovies() {
     <>
       <NavBar/>
       <div className='categoryMoviesPosters'>
-      {getCategoryMovies.map((movie, key)=>{
+      {getCategoryMovies.map((movie)=>{
         return (
-            <div className='posterList' key={key}>
+            <div className='posterList'>
                 <img className='posterImg' src={movie.img}/>
                 <h3 className='h3'>{movie.title}</h3>
             </div>

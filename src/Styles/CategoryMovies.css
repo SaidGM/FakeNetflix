@@ -18,12 +18,12 @@
 
 @media (min-width: 1100px){
     .categoryMoviesPosters{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         margin: 30px 35px 0;
     }
     .posterImg{
-        width: 23vw;
-        height: 53vh;
+        width: 15vw;
+        height: 40vh;
     }
     .posterImg:hover{
         -webkit-transform: scale(1.1);
