@@ -1,18 +1,17 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import allCategoryMoviesService from '../apiServices/allCategoryMoviesService';
+import allCategoriesService from '../apiServices/allCategoryMoviesService';
 import { useEffect, useState } from "react";
-
-// import jason from '../data/MoviesData'
+import { Link } from 'react-router-dom';
 
 
 function Categories() {
 
-  const [getAllCategoryMovies, setGetAllCategoryMovies] = useState([])
+  const [getAllCategories, setGetAllCategories] = useState([])
 
   useEffect(()=>{
-    allCategoryMoviesService.getAllCategoryMovies().then((data)=>{
-      setGetAllCategoryMovies(data)
+    allCategoriesService.getAllCategories().then((data)=>{
+      setGetAllCategories(data)
     })
   },[]);
 
@@ -20,10 +19,12 @@ function Categories() {
     <motion.div className='sliderBox'>
       <h4 className='h4'>Categories</h4>
       <motion.div className='sliderCategories'>
-        {getAllCategoryMovies.map((item)=>{
+        {getAllCategories.map((item)=>{
           return (
             <motion.div className='itemCategories'>
-              <h5>{item.category}</h5>
+              <Link to={`/category-movies/${item.id}`}>
+                <h5 className='categoryName'>{item.category}</h5>
+              </Link>
             </motion.div>
           )
         })}

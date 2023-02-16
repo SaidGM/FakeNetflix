@@ -29,7 +29,7 @@ function AllMovies() {
                 <motion.div key={key.id} className='item' >
                   <FaHeart id="heart"  className='iconMovies' color={item.isFavorite ? 'red' : 'white'} />
                   <FaPencilAlt id='pencil' className='iconMovies'/>
-                  <Link to={'/details'}>
+                  <Link to={`/details/${item.id}`}>
                     <FaInfoCircle id='info' className='iconMovies'/>
                   </Link>
                     <img src={item.img} alt="" />

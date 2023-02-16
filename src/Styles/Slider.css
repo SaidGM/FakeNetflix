@@ -14,11 +14,11 @@
 .iconMovies{
     font-size: 20px;
     position: absolute;
+    cursor: pointer;
 }
 #heart{
     right: 10px;
     bottom: 15px;
-    cursor: pointer;
 }
 #pencil{
     right: 10px;
@@ -39,18 +39,25 @@
     display: flex;
     position: relative;
     align-items: center;
+    justify-content: center;
     height: 10vh;
-    gap: 7px;
+    gap: 15px;
     width: 100%;
     /* cursor: grab; */
 }
 .itemCategories{
     width: 170px;
     position: relative;
-    background-color: rgb(197, 216, 117);
+    background-color: rgb(78, 78, 78);
     padding: 10px 5px;
     border-radius: 0.5em;
     text-align: center;
+}
+.categoryName{
+    color: white;
+}
+a:link { 
+    text-decoration: none;
 }
 .item img{
     pointer-events: none;/* para no arrastrar una imagen al seleccionarla  */

@@ -17,7 +17,7 @@ function Favorites() {
   return (
     <>
       <motion.div className='sliderBox'>
-        <h4 className='h4'>Favorite</h4>
+        <h4 className='h4'>Favorites</h4>
         <motion.div className='slider' drag='x' dragConstraints={{ right: 0, left: -883 }}>
           { 
             isFavorite.map((item, key) => {
