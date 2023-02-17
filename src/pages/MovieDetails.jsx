@@ -33,7 +33,7 @@ function MovieDetails() {
         </div>
 
         <div className='divImg'>
-          <img id='imgMovie' src={getMovieDetails.img}/>
+          <img id='imgMovie' src={getMovieDetails.img} alt=''/>
         </div>
 
       </div>

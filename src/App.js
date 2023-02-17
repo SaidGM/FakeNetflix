@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router";
 import PagePrincipal from "./pages/PagePrincipal";
 import MovieDetails from './pages/MovieDetails';
 import CategoryMovies from './pages/CategoryMovies';
+import FavMovies from './pages/FavMovies';
 
 
 function App() {
@@ -11,8 +12,7 @@ function App() {
         <Route path="/" element={<PagePrincipal/>}/>
         <Route path='/details/:id' element={<MovieDetails/>}/>
         <Route path='/category-movies/:id' element={<CategoryMovies/>}/>
-        <Route path="/favmovies" element={<PagePrincipal/>}/>
-
+        <Route path="/favmovies" element={<FavMovies/>}/>
       </Routes>
   );
 }

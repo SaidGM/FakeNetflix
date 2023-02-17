@@ -1,7 +1,5 @@
 import React from 'react'
-import AllMovies from '../components/AllMovies'
 import Categories from '../components/Categories'
-import Favorites from '../components/Favorites'
 import NavBar from '../components/NavBar'
 import MovieList from "../components/MovieList"
 import allMoviesService from '../apiServices/allMoviesServices';
@@ -39,8 +37,10 @@ function PagePrincipal() {
     <>
       <NavBar />
       {/* <AllMovies/> */}
+      <h4 className='h4'>All movies</h4>
       <MovieList movies={movies} handleFavoriteClick={handleFavoriteClick}/>
       <Categories/>
+      <h4 className='h4'>Favorites</h4>
       <MovieList movies={filterFavoriteMovies} handleFavoriteClick={handleFavoriteClick}/>
       <div className='hiddenDiv'></div>
     </>

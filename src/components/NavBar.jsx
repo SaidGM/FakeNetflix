@@ -15,13 +15,19 @@ function NavBar() {
             </Link>
 
             <li id='popular' className='icons'><FaHotjar/></li>
+            
+            <Link to='/favmovies'>
             <li id='favorite' className='icons'><FaStar/></li>
-
+            </Link>
 
             <Link to='/'>
               <li className='menuList'>Home</li>
             </Link>
+
+            <Link to='/favmovies'>
             <li className='menuList'>Favorites</li>
+            </Link>
+            
             <li className='menuList'>Popular</li>
             <li className='menuList'>Dowload</li>
         </ul>
