@@ -9,7 +9,6 @@ function AllMovies({movies, handleFavoriteClick}) {
 
   return (
     <>
-
       <motion.div className='sliderBox'>
         <h4 className='h4'>All movies</h4>
         <motion.div className='slider' drag='x' dragConstraints={{right: 0, left: -883}}>
@@ -29,7 +28,6 @@ function AllMovies({movies, handleFavoriteClick}) {
                     <img src={item.img} alt="" />
                 </motion.div>
               )
-            
             })
           }
         </motion.div>
