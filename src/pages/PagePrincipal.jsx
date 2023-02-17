@@ -42,6 +42,7 @@ function PagePrincipal() {
       <MovieList movies={movies} handleFavoriteClick={handleFavoriteClick}/>
       <Categories/>
       <MovieList movies={filterFavoriteMovies} handleFavoriteClick={handleFavoriteClick}/>
+      <div className='hiddenDiv'></div>
     </>
   )
 }

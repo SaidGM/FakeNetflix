@@ -1,6 +1,7 @@
 .sliderBox{
     overflow-x: hidden;
     overflow-y: hidden;
+    z-index:2;
     /* border: 1px solid pink; */
 }
 .slider{
