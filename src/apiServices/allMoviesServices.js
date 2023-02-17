@@ -14,6 +14,18 @@ const allMoviesService = {
         return axios.get(url + `/${id}` )
         .then((res)=>res.data)
         .catch((err)=>console.log(err))
+    },
+    
+    getIsFavorite(){
+        return axios.get(url + `?isFavorite=true` )
+        .then((res)=>res.data)
+        .catch((err)=>console.log(err))
+    },
+
+    toggleIsFavorite(id, data){
+        return axios.put(url + `/${id}`, data )
+        .then((res)=>res.data)
+        .catch((err)=>console.log(err))
     }
 }
 

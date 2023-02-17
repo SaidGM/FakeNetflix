@@ -10,10 +10,11 @@ function Favorites() {
   const [isFavorite, setIsFavorite] = useState([])
 
   useEffect(()=>{
-    allMoviesService.getAllMovies().then((data)=>{
+    allMoviesService.getIsFavorite().then((data)=>{
       setIsFavorite(data)
     })},[]);
 
+    
   return (
     <>
       <motion.div className='sliderBox'>
