@@ -13,9 +13,9 @@ function AllMovies({movies, handleFavoriteClick}) {
         {/* <h4 className='h4'>All movies</h4> */}
         <motion.div className='slider' drag='x' dragConstraints={{right: 0, left: -883}}>
           {
-            movies.map((item, key) => {
+            movies.map((item) => {
               return (
-                <motion.div key={key.id} className='item' >
+                <motion.div key={item.id} className='item' >
                   <FaHeart id="heart"  className='iconMovies' 
                   color={item.isFavorite ? 'red' : 'white'} 
                   onClick={()=>{

@@ -21,7 +21,7 @@ function Categories() {
       <motion.div className='sliderCategories'>
         {getAllCategories.map((item)=>{
           return (
-            <motion.div className='itemCategories'>
+            <motion.div className='itemCategories' key={item.id}>
               <Link to={`/category-movies/${item.id}`}>
                 <h5 className='categoryName'>{item.category}</h5>
               </Link>

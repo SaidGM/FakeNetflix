@@ -1,0 +1,49 @@
+.editForm{
+    border: 1px solid red;
+    display: block;
+    position: absolute;
+    top: 100px;
+    background-color: #232323;
+    color: #ffff;
+    width: 50%;
+    height: 40%;
+    left: 27%;
+    z-index: 4;
+    padding: 35px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 80%;
+}
+#dataForm{
+    height: 90%;
+    width: 100%;
+    overflow: visible;
+}
+#btnForm{
+    background-color: red;
+    color: #ffff;
+    width: 70px;
+    font-weight: bolder;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 1em;
+}
+.btnDiv{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+}
+#close{
+    margin-left: auto; 
+    margin-right: 0;
+    margin-bottom: 15px;
+    display: block;
+}
+#close:hover, #btnForm:hover{
+    cursor: pointer;
+}
