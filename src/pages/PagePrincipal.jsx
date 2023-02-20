@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar'
 import MovieList from "../components/MovieList"
 import allMoviesService from '../apiServices/allMoviesServices';
 import { useEffect, useState } from "react";
+import EditForm from '../components/EditForm';
 
 
 function PagePrincipal() {
@@ -42,6 +43,7 @@ function PagePrincipal() {
       <Categories/>
       <h4 className='h4'>Favorites</h4>
       <MovieList movies={filterFavoriteMovies} handleFavoriteClick={handleFavoriteClick}/>
+      <EditForm/>
       <div className='hiddenDiv'></div>
     </>
   )
