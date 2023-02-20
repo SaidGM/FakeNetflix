@@ -1,22 +1,28 @@
 import '../Styles/EditForm.css'
-import moviesData from '../data/MoviesData.js'
 import { FaTimes } from "react-icons/fa";
+import { useState, useEffect } from 'react';
+import allMoviesService from '../apiServices/allMoviesServices';
 
 
 function EditForm() {
 
-// hacer funcion handle clic para que cuando cliques el lapiz el display de editform sea block
-// y que cuando hagas click en la x el display sea none
+  function hide() {
+    document.querySelector(".editForm").style.display = "none";
+  }
 
-
+  // const [editMovie, setEditMovie] = useState([])
+  // useEffect(()=>{
+  //   allMoviesService.putMovieEdit(id).then((data)=>{
+  //     setEditMovie(data)
+  //   })},[]);
 
   return (
     <div className="editForm">
-    <FaTimes id='close'/>
+    <FaTimes id='close' onClick={hide}/>
       <form action="" className="">
-        <input id='titleForm' type="text" placeholder={moviesData[0].title}/>
-        <input id='yearForm' type="text" placeholder={moviesData[0].year}/>
-        <input id='dataForm' type="text" placeholder={moviesData[0].info}/>
+        <input id='titleForm' type="text" placeholder='hola'/>
+        <input id='yearForm' type="text" placeholder='hola'/>
+        <input id='dataForm' type="text" placeholder='hola'/>
         <div className='btnDiv'>
           <button id='btnForm'>Send</button>
         </div>

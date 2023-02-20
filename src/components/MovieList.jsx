@@ -1,27 +1,32 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {FaPencilAlt,FaHeart, FaInfoCircle} from 'react-icons/fa'
+import {FaPencilAlt,FaHeart, FaInfoCircle, FaTimes} from 'react-icons/fa'
 import '../Styles/Slider.css'
 
-function AllMovies({movies, handleFavoriteClick}) {
+function AllMovies({movies, handleFavoriteClick, deleteMovie}) {
   
+  function show() {
+    document.querySelector(".editForm").style.display = "block";
+  }
 
   return (
     <>
       <motion.div className='sliderBox'>
-        {/* <h4 className='h4'>All movies</h4> */}
-        <motion.div className='slider' drag='x' dragConstraints={{right: 0, left: -883}}>
+        {/* <motion.div className='slider' drag='x' dragConstraints={{right: 0, left: -883}}> */}
+        <motion.div className='slider' drag='x' >
+
           {
             movies.map((item) => {
               return (
                 <motion.div key={item.id} className='item' >
+                  <FaTimes id="delete"  className='iconMovies' onClick={deleteMovie}/>
                   <FaHeart id="heart"  className='iconMovies' 
                   color={item.isFavorite ? 'red' : 'white'} 
                   onClick={()=>{
                     handleFavoriteClick(item)
                     }} />
-                  <FaPencilAlt id='pencil' className='iconMovies'/>
+                  <FaPencilAlt id='pencil' className='iconMovies' onClick={show}/>
                   <Link to={`/details/${item.id}`}>
                     <FaInfoCircle id='info' className='iconMovies'/>
                   </Link>

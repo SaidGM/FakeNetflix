@@ -9,7 +9,7 @@ import EditForm from '../components/EditForm';
 
 function PagePrincipal() {
   const [movies, setMovies] = useState([])
-
+  
   useEffect(()=>{
     allMoviesService.getAllMovies().then((data)=>{
       setMovies(data)
@@ -26,23 +26,26 @@ function PagePrincipal() {
         }) 
         setMovies(temporalMovies)
       })
-
       console.log(movie.id)
-        
     }
-
-
     const filterFavoriteMovies = movies.filter(item => item.isFavorite === true)
+    
+
+    const [deleteMovie, setDeleteMovie] = useState([])
+    useEffect(()=>{
+      allMoviesService.deleteMovie().then((data)=>{
+        setDeleteMovie(data)
+      })},[]);
+
 
   return (
     <>
       <NavBar />
-      {/* <AllMovies/> */}
-      <h4 className='h4'>All movies</h4>
-      <MovieList movies={movies} handleFavoriteClick={handleFavoriteClick}/>
+      <h4 className='h4pp'>All movies</h4>
+      <MovieList movies={movies} deleteMovie={deleteMovie} handleFavoriteClick={handleFavoriteClick}/>
       <Categories/>
-      <h4 className='h4'>Favorites</h4>
-      <MovieList movies={filterFavoriteMovies} handleFavoriteClick={handleFavoriteClick}/>
+      <h4 className='h4pp'>Favorites</h4>
+      <MovieList movies={filterFavoriteMovies} deleteMovie={deleteMovie} handleFavoriteClick={handleFavoriteClick}/>
       <EditForm/>
       <div className='hiddenDiv'></div>
     </>

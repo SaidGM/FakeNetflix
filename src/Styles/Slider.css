@@ -17,6 +17,10 @@
     position: absolute;
     cursor: pointer;
 }
+#delete{
+    right: 10px;
+    top: 8px;
+}
 #heart{
     right: 10px;
     bottom: 15px;

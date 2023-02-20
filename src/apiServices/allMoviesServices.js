@@ -26,6 +26,18 @@ const allMoviesService = {
         return axios.put(url + `/${id}`, data )
         .then((res)=>res.data)
         .catch((err)=>console.log(err))
+    },
+
+    // putMovieEdit(id, data){
+    //     return axios.put(url + `/${id}` )
+    //     .then((res)=>res.data)
+    //     .catch((err)=>console.log(err))
+    // }
+
+    deleteMovie(id){
+        return axios.delete(url + `/${id}`)
+        .then((res)=>res.data)
+        .catch((err)=>console.log(err))
     }
 }
 

@@ -1,6 +1,6 @@
 .editForm{
     border: 1px solid red;
-    display: block;
+    display: none;
     position: absolute;
     top: 100px;
     background-color: #232323;

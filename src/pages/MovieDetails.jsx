@@ -15,6 +15,7 @@ function MovieDetails() {
       setGetMovieDetails(data)
     })},[]);
 
+  
   return (
     <>
     <NavBar /> 
