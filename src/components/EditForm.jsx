@@ -1,7 +1,5 @@
 import '../Styles/EditForm.css'
 import { FaTimes } from "react-icons/fa";
-import { useState, useEffect } from 'react';
-import allMoviesService from '../apiServices/allMoviesServices';
 
 
 function EditForm() {
@@ -10,11 +8,6 @@ function EditForm() {
     document.querySelector(".editForm").style.display = "none";
   }
 
-  // const [editMovie, setEditMovie] = useState([])
-  // useEffect(()=>{
-  //   allMoviesService.putMovieEdit(id).then((data)=>{
-  //     setEditMovie(data)
-  //   })},[]);
 
   return (
     <div className="editForm">
