@@ -29,23 +29,24 @@ function PagePrincipal() {
       console.log(movie.id)
     }
     const filterFavoriteMovies = movies.filter(item => item.isFavorite === true)
-    
 
-    const [deleteMovie, setDeleteMovie] = useState([])
-    useEffect(()=>{
-      allMoviesService.deleteMovie().then((data)=>{
-        setDeleteMovie(data)
-      })},[]);
-
+    const handleDelete = (movieId) => {
+      allMoviesService.deleteMovie(movieId)
+      .then((data)=>{
+        const newMovies = movies.filter(movie=>movie.id != movieId)
+        console.log(newMovies)
+        setMovies(newMovies)
+      })
+    }
 
   return (
     <>
       <NavBar />
       <h4 className='h4pp'>All movies</h4>
-      <MovieList movies={movies} deleteMovie={deleteMovie} handleFavoriteClick={handleFavoriteClick}/>
+      <MovieList movies={movies} handleDelete={handleDelete} handleFavoriteClick={handleFavoriteClick}/>
       <Categories/>
       <h4 className='h4pp'>Favorites</h4>
-      <MovieList movies={filterFavoriteMovies} deleteMovie={deleteMovie} handleFavoriteClick={handleFavoriteClick}/>
+      <MovieList movies={filterFavoriteMovies} handleFavoriteClick={handleFavoriteClick}/>
       <EditForm/>
       <div className='hiddenDiv'></div>
     </>

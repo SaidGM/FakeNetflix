@@ -36,7 +36,7 @@ const allMoviesService = {
 
     deleteMovie(id){
         return axios.delete(url + `/${id}`)
-        .then((res)=>res.data)
+        .then((res)=> res.data)
         .catch((err)=>console.log(err))
     }
 }
